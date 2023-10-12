@@ -15,18 +15,7 @@ app.use('/api', apiRoutes);
 
 app.listen(ServerConfig.PORT, async () => {
     console.log(`server started on PORT : ${ServerConfig.PORT}`);
-    try {
-       const response=await mailsender.sendMail({
-        from: ServerConfig.GMAIL_EMAIL,
-        to: 'raunakscarlet6@gmail.com',
-        subject: 'is it working?',
-        text: 'yes, it is working.'
-    });
-    console.log(response);
     
-   } catch (error) {
-    console.log(error);
-   }
 })
 
 
